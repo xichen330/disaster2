@@ -33,9 +33,10 @@ class EventsController < ApplicationController
     @message = Message.new
   end
   def leave_msg
-    @event = Event.find(params[:id])
     @message = Message.new(msg_params)
     @message.save
+
+    redirect_to :action => :index
   end
 
 

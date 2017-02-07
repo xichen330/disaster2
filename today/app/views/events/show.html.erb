@@ -2,5 +2,8 @@
 <%= simple_format(@event.title) %>
 <%= simple_format(@event.description) %>
 
+<%= @event.messages.name %>
+<%= @event.messages %>
+
 <p><%= link_to '回首頁', :controller => 'events', :action => 'index' %></p>
 <p><%= link_to '留言', :controller => 'events', :action => 'msg' %></p>
