@@ -1,0 +1,10 @@
+<%= form_for @message, :url => { :controller => 'events', :action => 'msg' } do |f| %>
+
+    <%= f.label :name, "姓名" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :messages, "訊息" %>
+    <%= f.text_area :messages %>
+
+    <%= f.submit "留言" %>
+<% end %>
