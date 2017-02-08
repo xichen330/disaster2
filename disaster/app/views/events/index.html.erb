@@ -1,0 +1,11 @@
+<ul>
+  <% @events.each do |event| %>
+      <li>
+        <%= link_to event.title, event_path(event) %>
+        <%= event.updated_at %>
+        <%= link_to 'Edit',  edit_event_path(event) %>
+        <%= link_to 'Delete',  event_path(event), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      </li>
+  <% end %>
+</ul>
+<%= link_to '新增資料', new_event_path %>

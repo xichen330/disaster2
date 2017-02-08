@@ -1,0 +1,16 @@
+<%= @event.category.name %>
+<%= simple_format(@event.title) %>
+<%= simple_format(@event.description) %>
+
+<ul>
+  <% @message.each do |message| %>
+      <li>
+        <%= message.name %>
+        <%= message.text %>
+      </li>
+  <% end %>
+</ul>
+
+
+<p><%= link_to '回首頁', events_path %></p>
+<p><%= link_to '留言', new_event_message_path(@event) %></p>
